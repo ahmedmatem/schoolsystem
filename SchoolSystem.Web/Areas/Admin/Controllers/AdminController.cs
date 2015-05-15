@@ -11,6 +11,10 @@
     [Authorize(Roles=GlobalConstants.RoleAdmin)]
     public class AdminController : BaseController
     {
-
+        public AdminController()
+            : base()
+        {
+            
+        }
     }
 }

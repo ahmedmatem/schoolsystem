@@ -7,7 +7,7 @@
         // GET: Admin/ERegister
         public ActionResult Index()
         {
-            return View();
+            return View("~/Areas/Admin/Views/ERegister/ERegSettings/Index.cshtml");
         }
     }
 }

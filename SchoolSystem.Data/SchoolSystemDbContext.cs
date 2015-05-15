@@ -21,15 +21,18 @@
         public SchoolSystemDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
-            this.teachersRelationship = new TeachersRelationships();
+
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            this.teachersRelationship = new TeachersRelationships();
             this.teachersRelationship.Configure(modelBuilder);
 
             base.OnModelCreating(modelBuilder);
         }
+
+        public virtual IDbSet<School> Schooles { get; set; }
 
         public virtual IDbSet<Student> Students { get; set; }
 

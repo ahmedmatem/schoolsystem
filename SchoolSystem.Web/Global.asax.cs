@@ -11,6 +11,7 @@
 
     using SchoolSystem.Data;
     using SchoolSystem.Data.Migrations;
+    using SchoolSystem.Web.App_Start;
 
     public class MvcApplication : System.Web.HttpApplication
     {
@@ -22,6 +23,7 @@
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            AutoMapperConfig.RegisterMappings();
         }
     }
 }

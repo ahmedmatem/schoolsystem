@@ -1,0 +1,110 @@
+﻿@model SchoolSystem.Web.Areas.Admin.ViewModels.SchoolViewModel
+
+@{
+    ViewBag.Title = "School Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>School Details</h2>
+
+@using (Html.BeginForm("Create", "School", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    
+    @Html.HiddenFor(m => m.Id)
+    
+    <div class="row form-group">
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.Name, new { @class = "pull-right" })
+        </div>
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.ShortName, new { @class = "pull-right" })
+        </div>
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.ShortName, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.City, new { @class = "pull-right" })
+        </div>
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.City, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.FirstAddresLine, new { @class = "pull-right" })
+        </div>
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.FirstAddresLine, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.SecondAddressLine, new { @class = "pull-right" })
+        </div>
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.SecondAddressLine, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.PostCode, new { @class = "pull-right" })
+        </div>
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.PostCode, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.MobilePhoneNumber, new { @class = "pull-right" })
+        </div>
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.MobilePhoneNumber, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.StationaryPhoneNumber, new { @class = "pull-right" })
+        </div>
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.StationaryPhoneNumber, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.Email, new { @class = "pull-right" })
+        </div>
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.WebSiteUrl, new { @class = "pull-right" })
+        </div>
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.WebSiteUrl, new { @class = "form-control" })
+        </div>
+    </div>
+    
+    <input type="submit" value="Create" class="btn btn-default" />
+}
+
+
+

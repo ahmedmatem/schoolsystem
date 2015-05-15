@@ -7,11 +7,11 @@
 
     public class BaseController : Controller
     {
-        protected DbContext context;
+        protected SchoolSystemDbContext dbContext;
 
         public BaseController()
         {
-            this.context = new SchoolSystemDbContext();
+            this.dbContext = new SchoolSystemDbContext();
         }
     }
 }
